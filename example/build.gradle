@@ -1,0 +1,22 @@
+group 'org.jimmyoak.plugin'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+         classpath 'org.jimmyoak.plugin:test-plugin:1.0'
+    }
+}
+
+apply plugin: 'testplugin'
